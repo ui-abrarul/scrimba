@@ -1,4 +1,5 @@
 import React from 'react'
+import Count from '../count/Count'
 
 const Usestate = () => {
 
@@ -28,9 +29,7 @@ const Usestate = () => {
 
             <div className="counter">
             <button onClick={countMinus} className="counter--minus">–</button>
-            <div className="counter--count">
-                <h1>{count}</h1>
-            </div>
+           <Count count={count}/>
             <button onClick={countPlus} className="counter--plus">+</button>
         </div>
         </div>

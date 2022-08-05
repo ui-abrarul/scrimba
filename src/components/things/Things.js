@@ -1,12 +1,14 @@
 import React from 'react'
 
 const Things = () => {
-    const thingsArray = ["Things 1", "Things 2"]
+
+  // Complex state Arrays
+    const thingsData = ["Things 1", "Things 2"]
+
+    const [thingsArray,setThingsArray] = React.useState(thingsData)
 
     function addThing(){
-        const newThing = `Things ${thingsArray.length + 1}`
-        thingsArray.push(newThing)
-        console.log(thingsArray)
+        setThingsArray(prevThingsArray => [...prevThingsArray, `Things ${prevThingsArray.length + 1}`])
     }
 
   return (

@@ -3,6 +3,8 @@ import './App.css'
 import Meme from "./components/meme/Meme";
 import Things from "./components/things/Things";
 import Usestate from "./components/useState/Usestate";
+import ComplexObject from "./components/complexObjects/ComplexObject";
+import Boxes from "./components/boxes/Boxes";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
     <Meme/>
     <Things/>
     <Usestate/>
+    <ComplexObject/>
+    <Boxes/>
     </div>
   );
 }
