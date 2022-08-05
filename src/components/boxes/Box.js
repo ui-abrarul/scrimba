@@ -7,21 +7,20 @@ const Box = (props) => {
 
     //we give each box state to handle //there is a better way to do this
 
-
-    const [boxState, setBoxState] = React.useState(props.on)
-
-
-    function flipBox() {
-        setBoxState(prevstate => !prevstate)
-    }
-
+    console.log(props)
 
     const styles = {
-        backgroundColor: boxState ? "#222222" : ""
+        backgroundColor: props.on ? "#222" : ""
     }
 
+
     return (
-        <div onClick={flipBox} style={styles} className='box'></div>
+        <div 
+        onClick={() => props.toggleBox(props.id)} 
+        style={styles} 
+        className='box'
+        >
+        </div>
     )
 }
 
